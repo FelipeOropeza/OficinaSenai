@@ -1,9 +1,12 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace OficinaMecanica
 {
@@ -14,16 +17,29 @@ namespace OficinaMecanica
         public string Desc_mat { get; set; }
         public string Uni_mat { get; set; }
 
-        public static DataTable GetMateriais()
+        public static DataTable GetMateriais(bool ativos)
         {
             var dt = new DataTable();
 
-            var sql = "select id_mat, cod_sap, desc_mat, uni_mat from tbl_material;";
+            var sql = "select * from vwMatLocaliza;";
 
             try
             {
-                using(var cn = new MySql)
+                using(var cn = new MySqlConnection(Conexao.conexao))
+                {
+                    cn.Open();
+                    using (var da = new MySqlDataAdapter(sql, cn))
+                    {
+                        da.Fill(dt);
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dt;
         }
     }
 }

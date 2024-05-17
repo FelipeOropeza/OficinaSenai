@@ -9,7 +9,7 @@ namespace OficinaMecanica
     static class Conexao
     {
         private const string servidor = "localhost";
-        private const string bancoDados = "dbForm";
+        private const string bancoDados = "db_oficina";
         private const string usuario = "root";
         private const string senha = "kiraFE22022006";
 
