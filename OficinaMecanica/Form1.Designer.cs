@@ -204,6 +204,7 @@
             this.Controls.Add(this.panelPrincipal);
             this.MaximizeBox = false;
             this.Name = "frm_est";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estoque Senai";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).EndInit();
             this.panelPrincipal.ResumeLayout(false);
