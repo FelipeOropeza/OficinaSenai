@@ -19,6 +19,7 @@ namespace OficinaMecanica
         {
             InitializeComponent();
             Inicializar();
+            dgvMaterial.CellDoubleClick += dgvMaterial_CellContentClick;
         }
 
         private void FormShow(Form frm)
@@ -59,6 +60,54 @@ namespace OficinaMecanica
 
         public void Inicializar()
         {
+            dt = Material.GetMateriais(true);
+            dgvMaterial.DataSource = dt;
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!txtCodSap.Text.Equals(""))
+                {
+                    dt = Material.GetMateriaisCod(true, txtCodSap.Text);
+                    if (dt.Rows.Count > 0)
+                    {
+                        dgvMaterial.DataSource = dt;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhum material foi encontrado com esse codigo");
+                    }
+                }
+                else
+                {
+                    dt = Material.GetMateriais(true);
+                    dgvMaterial.DataSource = dt;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Erro ao fazer a pesquisa : " + ex.Message);
+            }
+        }
+
+        private void dgvMaterial_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvMaterial.Columns["cod_sap"].Index && e.RowIndex >= 0)
+            {
+                object cellValue = dgvMaterial.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+
+                if (cellValue != null)
+                {
+                    txtCodSap.Text = cellValue.ToString();
+                }
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtCodSap.Text = "";
             dt = Material.GetMateriais(true);
             dgvMaterial.DataSource = dt;
         }

@@ -20,12 +20,37 @@ namespace OficinaMecanica
         public static DataTable GetMateriais(bool ativos)
         {
             var dt = new DataTable();
-
+            
             var sql = "select * from vwMatLocaliza;";
 
             try
             {
                 using(var cn = new MySqlConnection(Conexao.conexao))
+                {
+                    cn.Open();
+                    using (var da = new MySqlDataAdapter(sql, cn))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dt;
+        }
+
+        public static DataTable GetMateriaisCod(bool ativos, string cod)
+        {
+            var dt = new DataTable();
+
+            var sql = $"select * from vwMatLocaliza where cod_sap = '{cod}';";
+
+            try
+            {
+                using (var cn = new MySqlConnection(Conexao.conexao))
                 {
                     cn.Open();
                     using (var da = new MySqlDataAdapter(sql, cn))
