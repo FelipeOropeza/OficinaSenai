@@ -31,6 +31,7 @@ namespace OficinaMecanica
             txtCodSap.Text = "";
             txtDesc.Text = "";
             txtUni.Text = "";
+            txtCodSap.Focus();
             dt = Material.selectMaterial(true);
             dgvMat.DataSource = dt;
         }
