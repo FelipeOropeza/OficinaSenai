@@ -29,43 +29,36 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_est));
-            this.dgvMaterial = new System.Windows.Forms.DataGridView();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.btnMaterial = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelForm = new System.Windows.Forms.Panel();
-            this.lblText = new System.Windows.Forms.Label();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtCodSap = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
+            this.txtCodSap = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.lblText = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAddEstoque = new System.Windows.Forms.Button();
+            this.btnAddTurma = new System.Windows.Forms.Button();
+            this.dgvMaterial = new System.Windows.Forms.DataGridView();
             this.panelPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelForm.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvMaterial
-            // 
-            this.dgvMaterial.AllowUserToAddRows = false;
-            this.dgvMaterial.AllowUserToDeleteRows = false;
-            this.dgvMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMaterial.Location = new System.Drawing.Point(20, 172);
-            this.dgvMaterial.Name = "dgvMaterial";
-            this.dgvMaterial.ReadOnly = true;
-            this.dgvMaterial.Size = new System.Drawing.Size(619, 266);
-            this.dgvMaterial.TabIndex = 0;
-            this.dgvMaterial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMaterial_CellContentClick);
             // 
             // panelPrincipal
             // 
-            this.panelPrincipal.BackColor = System.Drawing.Color.Maroon;
+            this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(99)))), ((int)(((byte)(162)))));
             this.panelPrincipal.Controls.Add(this.btnMaterial);
             this.panelPrincipal.Controls.Add(this.btnHome);
             this.panelPrincipal.Controls.Add(this.panel1);
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelPrincipal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(149, 450);
@@ -79,13 +72,13 @@
             this.btnMaterial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btnMaterial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaterial.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaterial.ForeColor = System.Drawing.Color.White;
             this.btnMaterial.Location = new System.Drawing.Point(0, 131);
             this.btnMaterial.Name = "btnMaterial";
             this.btnMaterial.Size = new System.Drawing.Size(149, 45);
             this.btnMaterial.TabIndex = 4;
-            this.btnMaterial.Text = "Meterial";
+            this.btnMaterial.Text = "MATERIAL";
             this.btnMaterial.UseVisualStyleBackColor = true;
             this.btnMaterial.Click += new System.EventHandler(this.btnMaterial_Click);
             // 
@@ -97,19 +90,19 @@
             this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Location = new System.Drawing.Point(0, 86);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(149, 45);
             this.btnHome.TabIndex = 3;
-            this.btnHome.Text = "Home";
+            this.btnHome.Text = "HOME";
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(99)))), ((int)(((byte)(162)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -129,53 +122,17 @@
             // 
             // panelForm
             // 
+            this.panelForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.panelForm.Controls.Add(this.btnLimpar);
             this.panelForm.Controls.Add(this.txtCodSap);
             this.panelForm.Controls.Add(this.btnPesquisar);
             this.panelForm.Controls.Add(this.lblText);
             this.panelForm.Controls.Add(this.dgvMaterial);
-            this.panelForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelForm.Location = new System.Drawing.Point(149, 0);
+            this.panelForm.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelForm.Location = new System.Drawing.Point(149, 46);
             this.panelForm.Name = "panelForm";
-            this.panelForm.Size = new System.Drawing.Size(651, 450);
+            this.panelForm.Size = new System.Drawing.Size(651, 404);
             this.panelForm.TabIndex = 2;
-            // 
-            // lblText
-            // 
-            this.lblText.AutoSize = true;
-            this.lblText.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblText.Location = new System.Drawing.Point(113, 44);
-            this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(94, 18);
-            this.lblText.TabIndex = 1;
-            this.lblText.Text = "Codigo Sap:";
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.BackColor = System.Drawing.Color.Blue;
-            this.btnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPesquisar.FlatAppearance.BorderSize = 0;
-            this.btnPesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.btnPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnPesquisar.Location = new System.Drawing.Point(338, 40);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(73, 25);
-            this.btnPesquisar.TabIndex = 2;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // txtCodSap
-            // 
-            this.txtCodSap.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodSap.Location = new System.Drawing.Point(213, 42);
-            this.txtCodSap.MaxLength = 18;
-            this.txtCodSap.Name = "txtCodSap";
-            this.txtCodSap.Size = new System.Drawing.Size(100, 23);
-            this.txtCodSap.TabIndex = 3;
             // 
             // btnLimpar
             // 
@@ -195,30 +152,128 @@
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // txtCodSap
+            // 
+            this.txtCodSap.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodSap.Location = new System.Drawing.Point(213, 42);
+            this.txtCodSap.MaxLength = 18;
+            this.txtCodSap.Name = "txtCodSap";
+            this.txtCodSap.Size = new System.Drawing.Size(100, 23);
+            this.txtCodSap.TabIndex = 3;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.BackColor = System.Drawing.Color.Blue;
+            this.btnPesquisar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnPesquisar.FlatAppearance.BorderSize = 0;
+            this.btnPesquisar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnPesquisar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPesquisar.Location = new System.Drawing.Point(338, 40);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(73, 25);
+            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // lblText
+            // 
+            this.lblText.AutoSize = true;
+            this.lblText.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblText.Location = new System.Drawing.Point(113, 44);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(94, 18);
+            this.lblText.TabIndex = 1;
+            this.lblText.Text = "Codigo Sap:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(99)))), ((int)(((byte)(162)))));
+            this.panel2.Controls.Add(this.btnAddEstoque);
+            this.panel2.Controls.Add(this.btnAddTurma);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(149, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(651, 47);
+            this.panel2.TabIndex = 3;
+            // 
+            // btnAddEstoque
+            // 
+            this.btnAddEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(1)))));
+            this.btnAddEstoque.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAddEstoque.FlatAppearance.BorderSize = 0;
+            this.btnAddEstoque.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAddEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
+            this.btnAddEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEstoque.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEstoque.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddEstoque.Location = new System.Drawing.Point(387, 12);
+            this.btnAddEstoque.Name = "btnAddEstoque";
+            this.btnAddEstoque.Size = new System.Drawing.Size(111, 23);
+            this.btnAddEstoque.TabIndex = 1;
+            this.btnAddEstoque.Text = "ADD ESTOQUE";
+            this.btnAddEstoque.UseVisualStyleBackColor = false;
+            this.btnAddEstoque.Click += new System.EventHandler(this.btnAddEstoque_Click);
+            // 
+            // btnAddTurma
+            // 
+            this.btnAddTurma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(1)))));
+            this.btnAddTurma.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAddTurma.FlatAppearance.BorderSize = 0;
+            this.btnAddTurma.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAddTurma.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
+            this.btnAddTurma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTurma.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTurma.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddTurma.Location = new System.Drawing.Point(519, 12);
+            this.btnAddTurma.Name = "btnAddTurma";
+            this.btnAddTurma.Size = new System.Drawing.Size(95, 23);
+            this.btnAddTurma.TabIndex = 0;
+            this.btnAddTurma.Text = "ADD TURMA";
+            this.btnAddTurma.UseVisualStyleBackColor = false;
+            this.btnAddTurma.Click += new System.EventHandler(this.btnAddTurma_Click);
+            // 
+            // dgvMaterial
+            // 
+            this.dgvMaterial.AllowUserToAddRows = false;
+            this.dgvMaterial.AllowUserToDeleteRows = false;
+            this.dgvMaterial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dgvMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMaterial.Location = new System.Drawing.Point(20, 126);
+            this.dgvMaterial.Name = "dgvMaterial";
+            this.dgvMaterial.ReadOnly = true;
+            this.dgvMaterial.Size = new System.Drawing.Size(619, 266);
+            this.dgvMaterial.TabIndex = 0;
+            this.dgvMaterial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMaterial_CellContentClick);
+            // 
             // frm_est
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelForm);
             this.Controls.Add(this.panelPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frm_est";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estoque Senai";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).EndInit();
             this.panelPrincipal.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelForm.ResumeLayout(false);
             this.panelForm.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvMaterial;
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Button btnMaterial;
         private System.Windows.Forms.Button btnHome;
@@ -229,6 +284,10 @@
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Label lblText;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnAddTurma;
+        private System.Windows.Forms.Button btnAddEstoque;
+        private System.Windows.Forms.DataGridView dgvMaterial;
     }
 }
 

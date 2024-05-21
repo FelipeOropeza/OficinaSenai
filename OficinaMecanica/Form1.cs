@@ -111,5 +111,17 @@ namespace OficinaMecanica
             dt = Material.GetMateriais(true);
             dgvMaterial.DataSource = dt;
         }
+
+        private void btnAddEstoque_Click(object sender, EventArgs e)
+        {
+            var frm = new frmEstoque();
+            frm.ShowDialog();
+        }
+
+        private void btnAddTurma_Click(object sender, EventArgs e)
+        {
+            var frm = new frmTurma();
+            frm.ShowDialog();
+        }
     }
 }
