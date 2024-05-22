@@ -21,7 +21,7 @@ namespace OficinaMecanica
         {
             var dt = new DataTable();
             
-            var sql = "select * from vwMatLocaliza;";
+            var sql = "select cod_sap, desc_arm, nm_pos, qtd_est from vwMatLocaliza;";
 
             try
             {
@@ -82,6 +82,31 @@ namespace OficinaMecanica
             var dt = new DataTable();
 
             var sql = $"select * from vwMatLocaliza where cod_sap = '{cod}';";
+
+            try
+            {
+                using (var cn = new MySqlConnection(Conexao.conexao))
+                {
+                    cn.Open();
+                    using (var da = new MySqlDataAdapter(sql, cn))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dt;
+        }
+
+        public static DataTable selectPesquisaDesc(string pesq)
+        {
+            var dt = new DataTable();
+
+            var sql = $"select cod_sap, desc_mat, desc_arm, nm_pos, qtd_est from vwMatLocaliza where desc_mat like '%{pesq}%';";
 
             try
             {
@@ -189,6 +214,30 @@ namespace OficinaMecanica
             catch (Exception ex)
             {
                 MessageBox.Show("Erro no banco de dados - método insertLocaliza: " + ex.Message);
+                return false;
+            }
+        }
+
+        public bool insertMovimentacao(bool ativos, int qtdMat, int codPos, int codArm, int codprof, int codTur)
+        {
+            try
+            {
+                MySqlConnection MySqlConnection = new MySqlConnection(Conexao.conexao);
+                MySqlConnection.Open();
+
+                int valor = ativos ? 1 : 0;
+
+                string procedure = $"call spInsertMovimentacao('{valor}', '{qtdMat}', '{Cod_sap}', '{codPos}', '{codArm}', '{codprof}', '{codTur}')";
+
+                MySqlCommand comandoSql = MySqlConnection.CreateCommand();
+                comandoSql.CommandText = procedure;
+
+                comandoSql.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro no banco de dados - método insertMovimentacao: " + ex.Message);
                 return false;
             }
         }

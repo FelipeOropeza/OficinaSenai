@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,31 @@ namespace OficinaMecanica
                 MessageBox.Show("Erro no banco de dados - método insertTurma: " + ex.Message);
                 return false;
             }
+        }
+
+        public static DataTable pesquisaTurma(string pesq)
+        {
+            var dt = new DataTable();
+
+            var sql = $"select id_tur, nm_tur from vwProfTurma where sn_prof = '{pesq}';";
+
+            try
+            {
+                using (var cn = new MySqlConnection(Conexao.conexao))
+                {
+                    cn.Open();
+                    using (var da = new MySqlDataAdapter(sql, cn))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dt;
         }
     }
 }

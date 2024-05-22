@@ -51,7 +51,7 @@ namespace OficinaMecanica
                     turFunc.Nm_tur = txtNome.Text;
                     if (turFunc.insertTurma(combo))
                     {
-                        MessageBox.Show($"A Turma {turFunc.Nm_tur} foi cadastrado e vinculada!");
+                        MessageBox.Show($"A Turma {turFunc.Nm_tur} foi cadastrada e vinculada!");
                         txtNome.Clear();
                         txtNome.Focus();
                     }

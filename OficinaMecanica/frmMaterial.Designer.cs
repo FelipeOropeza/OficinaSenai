@@ -123,7 +123,7 @@
             // 
             this.txtDesc.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesc.Location = new System.Drawing.Point(151, 58);
-            this.txtDesc.MaxLength = 18;
+            this.txtDesc.MaxLength = 255;
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(286, 23);
             this.txtDesc.TabIndex = 13;

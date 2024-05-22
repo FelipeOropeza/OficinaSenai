@@ -75,6 +75,31 @@ namespace OficinaMecanica
             }
         }
 
+        public static DataTable GetProfessorSN(string Sn)
+        {
+            var dt = new DataTable();
+
+            var sql = $"select id_prof from tbl_professor where sn_prof = '{Sn}';";
+
+            try
+            {
+                using (var cn = new MySqlConnection(Conexao.conexao))
+                {
+                    cn.Open();
+                    using (var da = new MySqlDataAdapter(sql, cn))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dt;
+        }
+
         public bool insertProfessor()
         {
             try

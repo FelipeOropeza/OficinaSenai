@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_est));
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.btnLoca = new System.Windows.Forms.Button();
+            this.btnMov = new System.Windows.Forms.Button();
             this.btnProfessor = new System.Windows.Forms.Button();
             this.btnMaterial = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@
             this.btnPosicao = new System.Windows.Forms.Button();
             this.btnAddEstoque = new System.Windows.Forms.Button();
             this.btnAddTurma = new System.Windows.Forms.Button();
-            this.btnMov = new System.Windows.Forms.Button();
-            this.btnLoca = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,6 +70,42 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(149, 450);
             this.panelPrincipal.TabIndex = 1;
+            // 
+            // btnLoca
+            // 
+            this.btnLoca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnLoca.FlatAppearance.BorderSize = 0;
+            this.btnLoca.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnLoca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnLoca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoca.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoca.ForeColor = System.Drawing.Color.White;
+            this.btnLoca.Location = new System.Drawing.Point(0, 266);
+            this.btnLoca.Name = "btnLoca";
+            this.btnLoca.Size = new System.Drawing.Size(149, 45);
+            this.btnLoca.TabIndex = 7;
+            this.btnLoca.Text = "LOCALIZAÇÃO";
+            this.btnLoca.UseVisualStyleBackColor = true;
+            this.btnLoca.Click += new System.EventHandler(this.btnLoca_Click);
+            // 
+            // btnMov
+            // 
+            this.btnMov.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMov.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnMov.FlatAppearance.BorderSize = 0;
+            this.btnMov.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnMov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnMov.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMov.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMov.ForeColor = System.Drawing.Color.White;
+            this.btnMov.Location = new System.Drawing.Point(0, 221);
+            this.btnMov.Name = "btnMov";
+            this.btnMov.Size = new System.Drawing.Size(149, 45);
+            this.btnMov.TabIndex = 6;
+            this.btnMov.Text = "MOVIMENTAÇÃO";
+            this.btnMov.UseVisualStyleBackColor = true;
+            this.btnMov.Click += new System.EventHandler(this.btnMov_Click);
             // 
             // btnProfessor
             // 
@@ -292,41 +328,6 @@
             this.btnAddTurma.Text = "ADD TURMA";
             this.btnAddTurma.UseVisualStyleBackColor = false;
             this.btnAddTurma.Click += new System.EventHandler(this.btnAddTurma_Click);
-            // 
-            // btnMov
-            // 
-            this.btnMov.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMov.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnMov.FlatAppearance.BorderSize = 0;
-            this.btnMov.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.btnMov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.btnMov.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMov.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMov.ForeColor = System.Drawing.Color.White;
-            this.btnMov.Location = new System.Drawing.Point(0, 221);
-            this.btnMov.Name = "btnMov";
-            this.btnMov.Size = new System.Drawing.Size(149, 45);
-            this.btnMov.TabIndex = 6;
-            this.btnMov.Text = "MOVIMENTAÇÃO";
-            this.btnMov.UseVisualStyleBackColor = true;
-            // 
-            // btnLoca
-            // 
-            this.btnLoca.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLoca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnLoca.FlatAppearance.BorderSize = 0;
-            this.btnLoca.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.btnLoca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.btnLoca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoca.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoca.ForeColor = System.Drawing.Color.White;
-            this.btnLoca.Location = new System.Drawing.Point(0, 266);
-            this.btnLoca.Name = "btnLoca";
-            this.btnLoca.Size = new System.Drawing.Size(149, 45);
-            this.btnLoca.TabIndex = 7;
-            this.btnLoca.Text = "LOCALIZAÇÃO";
-            this.btnLoca.UseVisualStyleBackColor = true;
-            this.btnLoca.Click += new System.EventHandler(this.btnLoca_Click);
             // 
             // frm_est
             // 

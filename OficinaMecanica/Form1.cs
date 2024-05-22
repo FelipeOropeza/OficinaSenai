@@ -72,6 +72,12 @@ namespace OficinaMecanica
             FormShow(new frmLocalizacao());
         }
 
+        private void btnMov_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnMov);
+            FormShow(new frmMovimentacao());
+        }
+
         public void Inicializar()
         {
             dt = Material.GetMateriais(true);

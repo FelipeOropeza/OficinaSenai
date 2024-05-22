@@ -63,5 +63,30 @@ namespace OficinaMecanica
                 return false;
             }
         }
+
+        public static DataTable pesquisaPosicao(string pesq, string codsap)
+        {
+            var dt = new DataTable();
+
+            var sql = $"select distinct id_pos, nm_pos from vwMatLocaliza where desc_mat like '%{pesq}%' and cod_sap = '{codsap}'";
+
+            try
+            {
+                using (var cn = new MySqlConnection(Conexao.conexao))
+                {
+                    cn.Open();
+                    using (var da = new MySqlDataAdapter(sql, cn))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dt;
+        }
     }
 }
