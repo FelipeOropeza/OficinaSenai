@@ -111,6 +111,12 @@
     <Compile Include="frmEstoque.Designer.cs">
       <DependentUpon>frmEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLocalizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocalizacao.Designer.cs">
+      <DependentUpon>frmLocalizacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,24 @@
     </Compile>
     <Compile Include="frmMatExcluir.Designer.cs">
       <DependentUpon>frmMatExcluir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPosicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPosicao.Designer.cs">
+      <DependentUpon>frmPosicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfessor.Designer.cs">
+      <DependentUpon>frmProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfExcluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfExcluir.Designer.cs">
+      <DependentUpon>frmProfExcluir.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTurma.cs">
       <SubType>Form</SubType>
@@ -142,11 +166,23 @@
     <EmbeddedResource Include="frmEstoque.resx">
       <DependentUpon>frmEstoque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLocalizacao.resx">
+      <DependentUpon>frmLocalizacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMaterial.resx">
       <DependentUpon>frmMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMatExcluir.resx">
       <DependentUpon>frmMatExcluir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPosicao.resx">
+      <DependentUpon>frmPosicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfessor.resx">
+      <DependentUpon>frmProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfExcluir.resx">
+      <DependentUpon>frmProfExcluir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTurma.resx">
       <DependentUpon>frmTurma.cs</DependentUpon>

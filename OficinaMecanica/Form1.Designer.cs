@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_est));
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.btnProfessor = new System.Windows.Forms.Button();
             this.btnMaterial = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -39,21 +40,27 @@
             this.txtCodSap = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.lblText = new System.Windows.Forms.Label();
+            this.dgvMaterial = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPosicao = new System.Windows.Forms.Button();
             this.btnAddEstoque = new System.Windows.Forms.Button();
             this.btnAddTurma = new System.Windows.Forms.Button();
-            this.dgvMaterial = new System.Windows.Forms.DataGridView();
+            this.btnMov = new System.Windows.Forms.Button();
+            this.btnLoca = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelForm.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelPrincipal
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(99)))), ((int)(((byte)(162)))));
+            this.panelPrincipal.Controls.Add(this.btnLoca);
+            this.panelPrincipal.Controls.Add(this.btnMov);
+            this.panelPrincipal.Controls.Add(this.btnProfessor);
             this.panelPrincipal.Controls.Add(this.btnMaterial);
             this.panelPrincipal.Controls.Add(this.btnHome);
             this.panelPrincipal.Controls.Add(this.panel1);
@@ -63,6 +70,24 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(149, 450);
             this.panelPrincipal.TabIndex = 1;
+            // 
+            // btnProfessor
+            // 
+            this.btnProfessor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProfessor.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnProfessor.FlatAppearance.BorderSize = 0;
+            this.btnProfessor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnProfessor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfessor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfessor.ForeColor = System.Drawing.Color.White;
+            this.btnProfessor.Location = new System.Drawing.Point(0, 176);
+            this.btnProfessor.Name = "btnProfessor";
+            this.btnProfessor.Size = new System.Drawing.Size(149, 45);
+            this.btnProfessor.TabIndex = 5;
+            this.btnProfessor.Text = "PROFESSOR";
+            this.btnProfessor.UseVisualStyleBackColor = true;
+            this.btnProfessor.Click += new System.EventHandler(this.btnProfessor_Click);
             // 
             // btnMaterial
             // 
@@ -189,9 +214,23 @@
             this.lblText.TabIndex = 1;
             this.lblText.Text = "Codigo Sap:";
             // 
+            // dgvMaterial
+            // 
+            this.dgvMaterial.AllowUserToAddRows = false;
+            this.dgvMaterial.AllowUserToDeleteRows = false;
+            this.dgvMaterial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dgvMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMaterial.Location = new System.Drawing.Point(54, 150);
+            this.dgvMaterial.Name = "dgvMaterial";
+            this.dgvMaterial.ReadOnly = true;
+            this.dgvMaterial.Size = new System.Drawing.Size(545, 224);
+            this.dgvMaterial.TabIndex = 0;
+            this.dgvMaterial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMaterial_CellContentClick);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(99)))), ((int)(((byte)(162)))));
+            this.panel2.Controls.Add(this.btnPosicao);
             this.panel2.Controls.Add(this.btnAddEstoque);
             this.panel2.Controls.Add(this.btnAddTurma);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -199,6 +238,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(651, 47);
             this.panel2.TabIndex = 3;
+            // 
+            // btnPosicao
+            // 
+            this.btnPosicao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(1)))));
+            this.btnPosicao.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnPosicao.FlatAppearance.BorderSize = 0;
+            this.btnPosicao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnPosicao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
+            this.btnPosicao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPosicao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPosicao.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPosicao.Location = new System.Drawing.Point(255, 12);
+            this.btnPosicao.Name = "btnPosicao";
+            this.btnPosicao.Size = new System.Drawing.Size(111, 23);
+            this.btnPosicao.TabIndex = 2;
+            this.btnPosicao.Text = "ADD POSICAO";
+            this.btnPosicao.UseVisualStyleBackColor = false;
+            this.btnPosicao.Click += new System.EventHandler(this.btnAddPosicao_Click);
             // 
             // btnAddEstoque
             // 
@@ -236,18 +293,40 @@
             this.btnAddTurma.UseVisualStyleBackColor = false;
             this.btnAddTurma.Click += new System.EventHandler(this.btnAddTurma_Click);
             // 
-            // dgvMaterial
+            // btnMov
             // 
-            this.dgvMaterial.AllowUserToAddRows = false;
-            this.dgvMaterial.AllowUserToDeleteRows = false;
-            this.dgvMaterial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dgvMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMaterial.Location = new System.Drawing.Point(20, 126);
-            this.dgvMaterial.Name = "dgvMaterial";
-            this.dgvMaterial.ReadOnly = true;
-            this.dgvMaterial.Size = new System.Drawing.Size(619, 266);
-            this.dgvMaterial.TabIndex = 0;
-            this.dgvMaterial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMaterial_CellContentClick);
+            this.btnMov.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMov.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnMov.FlatAppearance.BorderSize = 0;
+            this.btnMov.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnMov.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnMov.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMov.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMov.ForeColor = System.Drawing.Color.White;
+            this.btnMov.Location = new System.Drawing.Point(0, 221);
+            this.btnMov.Name = "btnMov";
+            this.btnMov.Size = new System.Drawing.Size(149, 45);
+            this.btnMov.TabIndex = 6;
+            this.btnMov.Text = "MOVIMENTAÇÃO";
+            this.btnMov.UseVisualStyleBackColor = true;
+            // 
+            // btnLoca
+            // 
+            this.btnLoca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoca.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnLoca.FlatAppearance.BorderSize = 0;
+            this.btnLoca.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnLoca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnLoca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoca.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoca.ForeColor = System.Drawing.Color.White;
+            this.btnLoca.Location = new System.Drawing.Point(0, 266);
+            this.btnLoca.Name = "btnLoca";
+            this.btnLoca.Size = new System.Drawing.Size(149, 45);
+            this.btnLoca.TabIndex = 7;
+            this.btnLoca.Text = "LOCALIZAÇÃO";
+            this.btnLoca.UseVisualStyleBackColor = true;
+            this.btnLoca.Click += new System.EventHandler(this.btnLoca_Click);
             // 
             // frm_est
             // 
@@ -267,8 +346,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelForm.ResumeLayout(false);
             this.panelForm.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterial)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -288,6 +367,10 @@
         private System.Windows.Forms.Button btnAddTurma;
         private System.Windows.Forms.Button btnAddEstoque;
         private System.Windows.Forms.DataGridView dgvMaterial;
+        private System.Windows.Forms.Button btnPosicao;
+        private System.Windows.Forms.Button btnProfessor;
+        private System.Windows.Forms.Button btnLoca;
+        private System.Windows.Forms.Button btnMov;
     }
 }
 

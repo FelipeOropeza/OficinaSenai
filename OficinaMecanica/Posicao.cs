@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Windows.Forms;
+using System.Data;
 
 namespace OficinaMecanica
 {
@@ -14,6 +15,32 @@ namespace OficinaMecanica
     {
         public int Id_pos { get; set; }
         public string Nm_pos { get; set; }
+
+
+        public static DataTable selectPos()
+        {
+            var dt = new DataTable();
+
+            var sql = "select * from tbl_posicao;";
+
+            try
+            {
+                using (var cn = new MySqlConnection(Conexao.conexao))
+                {
+                    cn.Open();
+                    using (var da = new MySqlDataAdapter(sql, cn))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dt;
+        }
 
         public bool insertPosicao()
         {

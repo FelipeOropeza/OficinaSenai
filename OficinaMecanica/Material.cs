@@ -170,5 +170,27 @@ namespace OficinaMecanica
                 return false;
             }
         }
+
+        public bool insertLocaliza(int codArm, int codPos, int qtdMat)
+        {
+            try
+            {
+                MySqlConnection MySqlConnection = new MySqlConnection(Conexao.conexao);
+                MySqlConnection.Open();
+
+                string procedure = $"call spInsertLocaliza('{Cod_sap}', '{codArm}', '{codPos}', '{qtdMat}')";
+
+                MySqlCommand comandoSql = MySqlConnection.CreateCommand();
+                comandoSql.CommandText = procedure;
+
+                comandoSql.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro no banco de dados - método insertLocaliza: " + ex.Message);
+                return false;
+            }
+        }
     }
 }

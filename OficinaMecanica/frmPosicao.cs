@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace OficinaMecanica
 {
-    public partial class frmEstoque : Form
+    public partial class frmPosicao : Form
     {
-        public frmEstoque()
+        public frmPosicao()
         {
             InitializeComponent();
         }
@@ -24,23 +23,23 @@ namespace OficinaMecanica
             {
                 if (!txtNome.Text.Equals(""))
                 {
-                    Armazem armFunc = new Armazem();
-                    armFunc.Des_arm = txtNome.Text;
-                    if (armFunc.insertArmazem())
+                    Posicao posFunc = new Posicao();
+                    posFunc.Nm_pos = txtNome.Text;
+                    if (posFunc.insertPosicao())
                     {
-                        MessageBox.Show($"O armazem {armFunc.Des_arm} foi cadastrado com sucesso!");
+                        MessageBox.Show($"A posição {posFunc.Nm_pos} foi cadastrado com sucesso!");
                         txtNome.Clear();
                         txtNome.Focus();
 
                         var formLocalizacao = Application.OpenForms.OfType<frmLocalizacao>().FirstOrDefault();
                         if (formLocalizacao != null)
                         {
-                            formLocalizacao.MontarComboBoxArm();
+                            formLocalizacao.MontarComboBoxPos();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Não foi possivel cadastrar um armazem!");
+                        MessageBox.Show("Não foi possivel cadastrar uma posição!");
                     }
                 }
                 else
@@ -52,7 +51,7 @@ namespace OficinaMecanica
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao cadastrar estoque: " + ex.Message);
+                MessageBox.Show("Erro ao cadastrar posição: " + ex.Message);
             }
         }
     }

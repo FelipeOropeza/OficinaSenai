@@ -58,6 +58,20 @@ namespace OficinaMecanica
             FormShow(new frmMaterial());
         }
 
+
+        private void btnProfessor_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnProfessor);
+            FormShow(new frmProfessor());
+        }
+
+
+        private void btnLoca_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnLoca);
+            FormShow(new frmLocalizacao());
+        }
+
         public void Inicializar()
         {
             dt = Material.GetMateriais(true);
@@ -121,6 +135,12 @@ namespace OficinaMecanica
         private void btnAddTurma_Click(object sender, EventArgs e)
         {
             var frm = new frmTurma();
+            frm.ShowDialog();
+        }
+
+        private void btnAddPosicao_Click(object sender, EventArgs e)
+        {
+            var frm = new frmPosicao();
             frm.ShowDialog();
         }
     }

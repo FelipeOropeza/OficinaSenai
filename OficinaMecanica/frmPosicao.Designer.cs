@@ -1,6 +1,6 @@
 ﻿namespace OficinaMecanica
 {
-    partial class frmEstoque
+    partial class frmPosicao
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.lblNome.Location = new System.Drawing.Point(12, 42);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(138, 18);
-            this.lblNome.TabIndex = 0;
-            this.lblNome.Text = "Nome do Estoque:";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtNome.Location = new System.Drawing.Point(156, 40);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(156, 23);
-            this.txtNome.TabIndex = 2;
             // 
             // btnCadastrar
             // 
@@ -61,15 +43,33 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCadastrar.Location = new System.Drawing.Point(123, 101);
+            this.btnCadastrar.Location = new System.Drawing.Point(123, 103);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(73, 25);
-            this.btnCadastrar.TabIndex = 3;
+            this.btnCadastrar.TabIndex = 6;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // frmEstoque
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Arial", 10F);
+            this.txtNome.Location = new System.Drawing.Point(156, 42);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(156, 23);
+            this.txtNome.TabIndex = 5;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.lblNome.Location = new System.Drawing.Point(12, 44);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(135, 18);
+            this.lblNome.TabIndex = 4;
+            this.lblNome.Text = "Nome do Posição:";
+            // 
+            // frmPosicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,9 +79,9 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmEstoque";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Formulário Estoque";
+            this.Name = "frmPosicao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Formulário Posição";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,8 +89,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblNome;
     }
 }
