@@ -47,6 +47,7 @@
             this.btnPosicao = new System.Windows.Forms.Button();
             this.btnAddEstoque = new System.Windows.Forms.Button();
             this.btnAddTurma = new System.Windows.Forms.Button();
+            this.btnSaiMat = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +59,7 @@
             // panelPrincipal
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(99)))), ((int)(((byte)(162)))));
+            this.panelPrincipal.Controls.Add(this.btnSaiMat);
             this.panelPrincipal.Controls.Add(this.btnLoca);
             this.panelPrincipal.Controls.Add(this.btnMov);
             this.panelPrincipal.Controls.Add(this.btnProfessor);
@@ -329,6 +331,24 @@
             this.btnAddTurma.UseVisualStyleBackColor = false;
             this.btnAddTurma.Click += new System.EventHandler(this.btnAddTurma_Click);
             // 
+            // btnSaiMat
+            // 
+            this.btnSaiMat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSaiMat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSaiMat.FlatAppearance.BorderSize = 0;
+            this.btnSaiMat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnSaiMat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnSaiMat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaiMat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaiMat.ForeColor = System.Drawing.Color.White;
+            this.btnSaiMat.Location = new System.Drawing.Point(0, 311);
+            this.btnSaiMat.Name = "btnSaiMat";
+            this.btnSaiMat.Size = new System.Drawing.Size(149, 45);
+            this.btnSaiMat.TabIndex = 8;
+            this.btnSaiMat.Text = "SAIDA DE MATERIAL";
+            this.btnSaiMat.UseVisualStyleBackColor = true;
+            this.btnSaiMat.Click += new System.EventHandler(this.btnSaiMat_Click);
+            // 
             // frm_est
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -372,6 +392,7 @@
         private System.Windows.Forms.Button btnProfessor;
         private System.Windows.Forms.Button btnLoca;
         private System.Windows.Forms.Button btnMov;
+        private System.Windows.Forms.Button btnSaiMat;
     }
 }
 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -132,6 +133,31 @@ namespace OficinaMecanica
             var dt = new DataTable();
 
             var sql = $"select * from tbl_material;";
+
+            try
+            {
+                using (var cn = new MySqlConnection(Conexao.conexao))
+                {
+                    cn.Open();
+                    using (var da = new MySqlDataAdapter(sql, cn))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return dt;
+        }
+
+        public static DataTable selectMovimentacao(bool ativos)
+        {
+            var dt = new DataTable();
+
+            var sql = "select * from vwMovimenta order by data_mov desc";
 
             try
             {

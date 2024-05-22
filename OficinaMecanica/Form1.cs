@@ -78,6 +78,12 @@ namespace OficinaMecanica
             FormShow(new frmMovimentacao());
         }
 
+        private void btnSaiMat_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnSaiMat);
+            FormShow(new frmSaidaMat());
+        }
+
         public void Inicializar()
         {
             dt = Material.GetMateriais(true);
