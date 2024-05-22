@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_est));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.btnSaiMat = new System.Windows.Forms.Button();
             this.btnLoca = new System.Windows.Forms.Button();
             this.btnMov = new System.Windows.Forms.Button();
             this.btnProfessor = new System.Windows.Forms.Button();
@@ -47,7 +50,6 @@
             this.btnPosicao = new System.Windows.Forms.Button();
             this.btnAddEstoque = new System.Windows.Forms.Button();
             this.btnAddTurma = new System.Windows.Forms.Button();
-            this.btnSaiMat = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +74,24 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(149, 450);
             this.panelPrincipal.TabIndex = 1;
+            // 
+            // btnSaiMat
+            // 
+            this.btnSaiMat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSaiMat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSaiMat.FlatAppearance.BorderSize = 0;
+            this.btnSaiMat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnSaiMat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnSaiMat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaiMat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaiMat.ForeColor = System.Drawing.Color.White;
+            this.btnSaiMat.Location = new System.Drawing.Point(0, 311);
+            this.btnSaiMat.Name = "btnSaiMat";
+            this.btnSaiMat.Size = new System.Drawing.Size(149, 45);
+            this.btnSaiMat.TabIndex = 8;
+            this.btnSaiMat.Text = "SAIDA DE MATERIAL";
+            this.btnSaiMat.UseVisualStyleBackColor = true;
+            this.btnSaiMat.Click += new System.EventHandler(this.btnSaiMat_Click);
             // 
             // btnLoca
             // 
@@ -256,11 +276,33 @@
             // 
             this.dgvMaterial.AllowUserToAddRows = false;
             this.dgvMaterial.AllowUserToDeleteRows = false;
+            this.dgvMaterial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMaterial.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvMaterial.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dgvMaterial.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMaterial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMaterial.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMaterial.Location = new System.Drawing.Point(54, 150);
+            this.dgvMaterial.MultiSelect = false;
             this.dgvMaterial.Name = "dgvMaterial";
-            this.dgvMaterial.ReadOnly = true;
+            this.dgvMaterial.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvMaterial.RowHeadersVisible = false;
             this.dgvMaterial.Size = new System.Drawing.Size(545, 224);
             this.dgvMaterial.TabIndex = 0;
             this.dgvMaterial.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMaterial_CellContentClick);
@@ -330,24 +372,6 @@
             this.btnAddTurma.Text = "ADD TURMA";
             this.btnAddTurma.UseVisualStyleBackColor = false;
             this.btnAddTurma.Click += new System.EventHandler(this.btnAddTurma_Click);
-            // 
-            // btnSaiMat
-            // 
-            this.btnSaiMat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSaiMat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnSaiMat.FlatAppearance.BorderSize = 0;
-            this.btnSaiMat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.btnSaiMat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.btnSaiMat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaiMat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaiMat.ForeColor = System.Drawing.Color.White;
-            this.btnSaiMat.Location = new System.Drawing.Point(0, 311);
-            this.btnSaiMat.Name = "btnSaiMat";
-            this.btnSaiMat.Size = new System.Drawing.Size(149, 45);
-            this.btnSaiMat.TabIndex = 8;
-            this.btnSaiMat.Text = "SAIDA DE MATERIAL";
-            this.btnSaiMat.UseVisualStyleBackColor = true;
-            this.btnSaiMat.Click += new System.EventHandler(this.btnSaiMat_Click);
             // 
             // frm_est
             // 

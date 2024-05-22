@@ -24,6 +24,15 @@ namespace OficinaMecanica
             dt = Material.selectMaterial(true);
             dgvMat.DataSource = dt;
             dgvMat.Columns["id_mat"].Visible = false;
+
+            dgvMat.Columns["cod_sap"].HeaderText = "Codigo Sap";
+            dgvMat.Columns["desc_mat"].HeaderText = "Descrição";
+            dgvMat.Columns["uni_mat"].HeaderText = "Unidade";
+
+            foreach (DataGridViewColumn column in dgvMat.Columns)
+            {
+                column.Resizable = DataGridViewTriState.False;
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

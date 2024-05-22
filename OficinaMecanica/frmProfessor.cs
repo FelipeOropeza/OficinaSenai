@@ -24,6 +24,13 @@ namespace OficinaMecanica
             dt = Professor.selectProf();
             dgvProf.DataSource = dt;
             dgvProf.Columns["id_prof"].Visible = false;
+            dgvProf.Columns["nm_prof"].HeaderText = "Nome do Professor";
+            dgvProf.Columns["sn_prof"].HeaderText = "SN";
+
+            foreach (DataGridViewColumn column in dgvProf.Columns)
+            {
+                column.Resizable = DataGridViewTriState.False;
+            }
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)

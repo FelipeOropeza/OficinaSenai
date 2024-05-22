@@ -88,6 +88,16 @@ namespace OficinaMecanica
         {
             dt = Material.GetMateriais(true);
             dgvMaterial.DataSource = dt;
+            dgvMaterial.Columns["cod_sap"].HeaderText = "Codigo Sap";
+            dgvMaterial.Columns["desc_arm"].HeaderText = "Descrição";
+            dgvMaterial.Columns["nm_pos"].HeaderText = "Posição";
+            dgvMaterial.Columns["qtd_est"].HeaderText = "Quantidade";
+
+            foreach (DataGridViewColumn column in dgvMaterial.Columns)
+            {
+                column.Resizable = DataGridViewTriState.False;
+            }
+
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -100,6 +110,10 @@ namespace OficinaMecanica
                     if (dt.Rows.Count > 0)
                     {
                         dgvMaterial.DataSource = dt;
+                        foreach (DataGridViewColumn column in dgvMaterial.Columns)
+                        {
+                            column.Resizable = DataGridViewTriState.False;
+                        }
                     }
                     else
                     {
