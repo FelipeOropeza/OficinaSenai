@@ -82,7 +82,7 @@ namespace OficinaMecanica
         {
             var dt = new DataTable();
 
-            var sql = $"select * from vwMatLocaliza where cod_sap = '{cod}';";
+            var sql = $"select cod_sap, desc_arm, nm_pos, qtd_est from vwMatLocaliza where cod_sap = '{cod}';";
 
             try
             {
