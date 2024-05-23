@@ -23,6 +23,18 @@ namespace OficinaMecanica
         {
             dt = Material.selectMovimentacao(true);
             dgvSaidaMat.DataSource = dt;
+
+            dgvSaidaMat.Columns["cod_sap"].HeaderText = "Codigo Sap";
+            dgvSaidaMat.Columns["nm_prof"].HeaderText = "Professor";
+            dgvSaidaMat.Columns["nm_tur"].HeaderText = "Turma";
+            dgvSaidaMat.Columns["data_mov"].HeaderText = "Data/Hora";
+            dgvSaidaMat.Columns["qtd_mov"].HeaderText = "Quantidade";
+
+            foreach (DataGridViewColumn column in dgvSaidaMat.Columns)
+            {
+                column.Resizable = DataGridViewTriState.False;
+            }
+
         }
     }
 }

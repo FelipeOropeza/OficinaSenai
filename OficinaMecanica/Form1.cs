@@ -89,7 +89,7 @@ namespace OficinaMecanica
             dt = Material.GetMateriais(true);
             dgvMaterial.DataSource = dt;
             dgvMaterial.Columns["cod_sap"].HeaderText = "Codigo Sap";
-            dgvMaterial.Columns["desc_arm"].HeaderText = "Descrição";
+            dgvMaterial.Columns["desc_arm"].HeaderText = "Armazem";
             dgvMaterial.Columns["nm_pos"].HeaderText = "Posição";
             dgvMaterial.Columns["qtd_est"].HeaderText = "Quantidade";
 

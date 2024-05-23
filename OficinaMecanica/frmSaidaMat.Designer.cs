@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSaidaMat = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaidaMat)).BeginInit();
             this.SuspendLayout();
@@ -36,12 +38,33 @@
             // 
             this.dgvSaidaMat.AllowUserToAddRows = false;
             this.dgvSaidaMat.AllowUserToDeleteRows = false;
+            this.dgvSaidaMat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvSaidaMat.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSaidaMat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dgvSaidaMat.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSaidaMat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSaidaMat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSaidaMat.Location = new System.Drawing.Point(12, 12);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSaidaMat.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSaidaMat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSaidaMat.Location = new System.Drawing.Point(0, 0);
+            this.dgvSaidaMat.MultiSelect = false;
             this.dgvSaidaMat.Name = "dgvSaidaMat";
-            this.dgvSaidaMat.ReadOnly = true;
-            this.dgvSaidaMat.Size = new System.Drawing.Size(627, 380);
+            this.dgvSaidaMat.RowHeadersVisible = false;
+            this.dgvSaidaMat.Size = new System.Drawing.Size(651, 404);
             this.dgvSaidaMat.TabIndex = 12;
             // 
             // frmSaidaMat

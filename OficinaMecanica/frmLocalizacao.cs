@@ -30,6 +30,15 @@ namespace OficinaMecanica
         {
             dt = Material.GetMateriais(true);
             dgvLoc.DataSource = dt;
+            dgvLoc.Columns["cod_sap"].HeaderText = "Codigo Sap";
+            dgvLoc.Columns["desc_arm"].HeaderText = "Armazem";
+            dgvLoc.Columns["nm_pos"].HeaderText = "Posição";
+            dgvLoc.Columns["qtd_est"].HeaderText = "Quantidade";
+
+            foreach (DataGridViewColumn column in dgvLoc.Columns)
+            {
+                column.Resizable = DataGridViewTriState.False;
+            }
         }
 
         public void MontarComboBoxPos()

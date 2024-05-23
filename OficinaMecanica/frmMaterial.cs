@@ -43,6 +43,7 @@ namespace OficinaMecanica
             txtCodSap.Focus();
             dt = Material.selectMaterial(true);
             dgvMat.DataSource = dt;
+            dgvMat.Columns["cod_sap"].Width = 120;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)

@@ -32,6 +32,20 @@ namespace OficinaMecanica
             {
                 dt = Material.selectPesquisaDesc(txtPesq.Text);
                 dgvLoc.DataSource = dt;
+
+                dgvLoc.Columns["cod_sap"].HeaderText = "Codigo Sap";
+                dgvLoc.Columns["cod_sap"].Width = 120; 
+                dgvLoc.Columns["desc_mat"].HeaderText = "Descrição";
+                dgvLoc.Columns["desc_arm"].HeaderText = "Armazem";
+                dgvLoc.Columns["nm_pos"].HeaderText = "Posição";
+                dgvLoc.Columns["nm_pos"].Width = 80;
+                dgvLoc.Columns["qtd_est"].HeaderText = "Quantidade";
+                dgvLoc.Columns["qtd_est"].Width = 100;
+
+                foreach (DataGridViewColumn column in dgvLoc.Columns)
+                {
+                    column.Resizable = DataGridViewTriState.False;
+                }
             }
             else
             {
