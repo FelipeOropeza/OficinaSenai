@@ -93,11 +93,12 @@
             // 
             // txtSN
             // 
+            this.txtSN.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSN.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSN.Location = new System.Drawing.Point(151, 19);
             this.txtSN.MaxLength = 18;
             this.txtSN.Name = "txtSN";
-            this.txtSN.Size = new System.Drawing.Size(112, 23);
+            this.txtSN.Size = new System.Drawing.Size(133, 23);
             this.txtSN.TabIndex = 13;
             // 
             // lblText
@@ -112,6 +113,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(151, 58);
             this.txtNome.MaxLength = 18;

@@ -40,7 +40,7 @@
             // 
             this.lblTurma.AutoSize = true;
             this.lblTurma.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.lblTurma.Location = new System.Drawing.Point(12, 32);
+            this.lblTurma.Location = new System.Drawing.Point(58, 19);
             this.lblTurma.Name = "lblTurma";
             this.lblTurma.Size = new System.Drawing.Size(122, 18);
             this.lblTurma.TabIndex = 1;
@@ -48,10 +48,11 @@
             // 
             // txtNome
             // 
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtNome.Location = new System.Drawing.Point(140, 30);
+            this.txtNome.Location = new System.Drawing.Point(61, 40);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(176, 23);
+            this.txtNome.Size = new System.Drawing.Size(215, 23);
             this.txtNome.TabIndex = 2;
             // 
             // lblMessage

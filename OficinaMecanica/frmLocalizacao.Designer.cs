@@ -116,11 +116,12 @@
             // 
             // txtCodSap
             // 
+            this.txtCodSap.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodSap.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodSap.Location = new System.Drawing.Point(151, 19);
             this.txtCodSap.MaxLength = 18;
             this.txtCodSap.Name = "txtCodSap";
-            this.txtCodSap.Size = new System.Drawing.Size(112, 23);
+            this.txtCodSap.Size = new System.Drawing.Size(128, 23);
             this.txtCodSap.TabIndex = 19;
             // 
             // lblText

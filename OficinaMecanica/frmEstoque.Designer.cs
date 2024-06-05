@@ -37,7 +37,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.lblNome.Location = new System.Drawing.Point(12, 42);
+            this.lblNome.Location = new System.Drawing.Point(41, 30);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(138, 18);
             this.lblNome.TabIndex = 0;
@@ -45,10 +45,11 @@
             // 
             // txtNome
             // 
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtNome.Location = new System.Drawing.Point(156, 40);
+            this.txtNome.Location = new System.Drawing.Point(44, 51);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(156, 23);
+            this.txtNome.Size = new System.Drawing.Size(225, 23);
             this.txtNome.TabIndex = 2;
             // 
             // btnCadastrar

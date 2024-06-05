@@ -38,6 +38,7 @@
             // 
             // txtSN
             // 
+            this.txtSN.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSN.Enabled = false;
             this.txtSN.Font = new System.Drawing.Font("Arial", 10F);
             this.txtSN.Location = new System.Drawing.Point(90, 25);
